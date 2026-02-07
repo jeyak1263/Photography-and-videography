@@ -727,30 +727,192 @@ body{
   color: #c6ff1a;
 }
 
+/* =========================
+   RESPONSIVE FIX
+========================= */
 
-/* MOBILE */
+/* Tablet */
+@media (max-width: 1024px){
 
-@media(max-width:900px){
-
-  .hero,
-  .about,
-  .testimonial{
-    grid-template-columns:1fr;
+  .services-grid{
+    grid-template-columns: repeat(2,1fr);
   }
 
-  .grid-4{
-    grid-template-columns:1fr 1fr;
+  .about-grid{
+    grid-template-columns: 1fr;
+    text-align:center;
   }
 
-  .grid-3{
-    grid-template-columns:1fr;
+  .process-grid{
+    grid-template-columns: 1fr;
   }
 
-  .steps{
-    grid-template-columns:1fr 1fr;
+  .testi-grid{
+    grid-template-columns: 1fr;
+    text-align:center;
+  }
+
+  .blog-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .footer-top{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-left h1{
+    font-size: 46px;
+  }
+
+  .services-title,
+  .about-content h2,
+  .process-header h2,
+  .testi-left h2{
+    font-size: 42px;
+  }
+
+  .cat-title{
+    font-size: 36px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px){
+
+  .nav{
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
   .nav ul{
     display:none;
   }
+
+  .btn{
+    padding:8px 14px;
+  }
+
+  .hero-left{
+    padding: 20px;
+  }
+
+  .hero-left h1{
+    font-size: 34px;
+  }
+
+  .services-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .cat-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .cat-intro{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cat-line{
+    width: 100%;
+  }
+
+  .testi-right img{
+    width:100%;
+    padding-left:0;
+  }
+
+  .footer-top{
+    grid-template-columns: 1fr;
+  }
+
+  .services-title{
+    font-size: 32px;
+  }
+
+  .about-content h2,
+  .process-header h2,
+  .testi-left h2{
+    font-size: 30px;
+  }
+
 }
+
+
+/* Small Mobile */
+@media (max-width: 480px){
+
+  .hero-left h1{
+    font-size: 26px;
+  }
+
+  .cat-title{
+    font-size: 24px;
+  }
+
+  .service-card p,
+  .about-text,
+  .step p,
+  .testi-text,
+  .blog-card p{
+    font-size: 14px;
+  }
+
+  .circle-btn{
+    width:38px;
+    height:38px;
+  }
+
+}
+
+/* =====================
+   HAMBURGER MENU
+===================== */
+
+.hamburger{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:#b7ff00;
+}
+
+/* mobile nav */
+
+@media (max-width:768px){
+
+  .hamburger{
+    display:block;
+  }
+
+  .nav{
+    position:relative;
+  }
+
+  .nav ul{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#0b100e;
+    flex-direction:column;
+    gap:20px;
+    padding:25px 0;
+    text-align:center;
+    display:none;
+  }
+
+  .nav ul.show{
+    display:flex;
+  }
+
+  .btn{
+    display:none; /* hide button on small mobile (optional) */
+  }
+
+}
+

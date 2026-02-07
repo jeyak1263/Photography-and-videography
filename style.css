@@ -27,8 +27,8 @@ body{
 /* LOGO IMAGE SIZE CONTROL */
 
 .logo img{
-  height:48px;
-  width:auto;
+  height:100px;
+  width:200px;
   display:block;
 }
 

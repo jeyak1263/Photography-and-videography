@@ -1,7 +1,6 @@
-
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("navMenu");
 
-hamburger.onclick = () => {
+hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("show");
-};
+});
